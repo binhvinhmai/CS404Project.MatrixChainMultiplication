@@ -1,0 +1,23 @@
+﻿  Main.cpp
+c:\program files (x86)\microsoft visual studio 14.0\vc\include\numeric(20): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+  c:\program files (x86)\microsoft visual studio 14.0\vc\include\numeric(30): note: see reference to function template instantiation '_Ty std::_Accumulate<float*,_Ty,_Fn2>(_InIt,_InIt,_Ty,_Fn2)' being compiled
+          with
+          [
+              _Ty=int,
+              _Fn2=std::plus<void>,
+              _InIt=float *
+          ]
+  c:\program files (x86)\microsoft visual studio 14.0\vc\include\numeric(38): note: see reference to function template instantiation '_Ty std::accumulate<_InIt,_Ty,std::plus<void>>(_InIt,_InIt,_Ty,_Fn2)' being compiled
+          with
+          [
+              _Ty=int,
+              _InIt=std::_Vector_iterator<std::_Vector_val<std::_Simple_types<float>>>,
+              _Fn2=std::plus<void>
+          ]
+  \\kc.umkc.edu\kc-users\home\b\bvmvw5\my documents\visual studio 2015\projects\cs404project\cs404project\main.cpp(250): note: see reference to function template instantiation '_Ty std::accumulate<std::_Vector_iterator<std::_Vector_val<std::_Simple_types<float>>>,int>(_InIt,_InIt,_Ty)' being compiled
+          with
+          [
+              _Ty=int,
+              _InIt=std::_Vector_iterator<std::_Vector_val<std::_Simple_types<float>>>
+          ]
+  CS404Project.vcxproj -> \\kc.umkc.edu\kc-users\home\b\bvmvw5\My Documents\Visual Studio 2015\Projects\CS404Project\Debug\CS404Project.exe

@@ -29,7 +29,6 @@ vector<vector<int>> CreateMatrices(vector<int> dimensions) {
 	return matrixTable;
 }
 
-
 // Optimal Solution for Matrix Multiplication
 int OptimalSolution(vector<int> dimensions, vector<vector<int>>& matrixCosts, int i, int j) {
 	int cost;
@@ -40,8 +39,7 @@ int OptimalSolution(vector<int> dimensions, vector<vector<int>>& matrixCosts, in
 	else if (i == j) {
 		return 0;
 	}
-	else {
-		// TODO: This is not working in the expected way. Take not in programming. 
+	else { 
 		matrixCosts[i][j] = numeric_limits<int>::max(); // Assign infinity to the matrix set
 		for (int k = i; k < j; k++) {
 			cost1 = OptimalSolution(dimensions, matrixCosts, i, k);
@@ -169,6 +167,17 @@ int HeuristicLeastExpensive(vector<int> dimensions) {
 	return cost;
 }
 
+// The below function is referred to as HeuristicE in the project statement and in the project report. 
+// I have renamed it to heuristicLeastExpensive to adhere to naming practice
+int RandomExecutionTree(vector<int> dimensions, int i, int j) {
+	if (i == j) {
+		return dimensions[i] * dimensions[i - 1];
+	}
+	else if (j == i + 1) { // If the dimensinos are adjacent to each other 
+		return dimensions[i - 1] * dimensions[i] * dimensions[j];
+	}
+}
+
 // The below function is referred to as HeuristicF in the project statement and in the project report. 
 // I have renamed it to heuristicIgnorantMethod to adhere to naming practices
 int HeuristicIgnorantMethod(vector<int> dimensions) {
@@ -201,6 +210,8 @@ int main() {
 	system("pause");
 	*/
 	
+
+	// MATRIX CHAIN HEURISTIC EXPERIMENT
 	// As given in the project algorithm: Range for the low and high value for the random matrices' dimensions
 	int lowValue = 7, highValue = 17;
 	int optimal;
@@ -237,6 +248,7 @@ int main() {
 			optimal = MatrixChain(dimensions, matricesTable);
 			// Assign each index of each Heuristic Array the overall cost for each vector
 			// Evaluate heuristics a-f - find the cost of each heuristic and how it performs with the matrix multiplication
+			// Overwrites the previous file image
 			matricesA[r] = float(HeuristicLargestFirst(heuristicA)) / float(optimal);
 			matricesB[r] = float(HeuristicMostExpensive(heuristicB)) / float(optimal);
 			matricesC[r] = float(HeuristicSmallestFirst(heuristicC)) / float(optimal);
@@ -254,6 +266,9 @@ int main() {
 		cout << setw(30) << "Ignorant Method" << setw(15) << *min_element(matricesF.begin(), matricesF.end()) << setw(15) << float(accumulate(matricesF.begin(), matricesF.end(), 0)) / float(matricesF.size()) << setw(15) << *max_element(matricesF.begin(), matricesF.end()) << endl;
 		cout << endl;
 	}
+
+	// MATRIX CHAIN FILE EXPERIMENT 
+
 	system("pause");
 	return 0;
 }

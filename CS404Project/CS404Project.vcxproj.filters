@@ -19,4 +19,27 @@
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="CS404SP17MatrixChainHeuristicsInput1.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="CS404SP17MatrixChainHeuristicsInput2.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="CS404SP17MatrixChainHeuristicsInput3.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="CS404SP17MatrixChainHeuristicsInput4.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="CS404SP17MatrixChainHeuristicsInput5.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="CS404SP17MatrixChainHeuristicsInput6.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="CS404SP17MatrixChainHeuristicsInput7.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+  </ItemGroup>
 </Project>

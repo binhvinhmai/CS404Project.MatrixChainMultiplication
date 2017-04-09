@@ -148,6 +148,15 @@
   <ItemGroup>
     <ClCompile Include="Main.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="CS404SP17MatrixChainHeuristicsInput1.txt" />
+    <Text Include="CS404SP17MatrixChainHeuristicsInput2.txt" />
+    <Text Include="CS404SP17MatrixChainHeuristicsInput3.txt" />
+    <Text Include="CS404SP17MatrixChainHeuristicsInput4.txt" />
+    <Text Include="CS404SP17MatrixChainHeuristicsInput5.txt" />
+    <Text Include="CS404SP17MatrixChainHeuristicsInput6.txt" />
+    <Text Include="CS404SP17MatrixChainHeuristicsInput7.txt" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

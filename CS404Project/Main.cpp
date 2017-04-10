@@ -11,6 +11,9 @@
 using namespace std;
 
 // Naming Conventions TitleCase = function, camelCase = variable
+// Binh Mai
+// CS404 
+// Spring 2017 Semester
 
 vector<vector<int>> CreateMatrices(vector<int> dimensions) {
 	// Function to create the 2D vector that is utilized for the optimal solution
@@ -219,7 +222,6 @@ float RandomExecutionTreeWrapper(vector<int> dimensions) {
 		calculatedTrees.push_back(float(RandomExecutionTree(dimensions)));
 		counter += 1;
 	}
-	// If the number has gone to 0 or below, that means the cost is too high and is now overflowing max amount allowed for int data type
 	return *min_element(calculatedTrees.begin(), calculatedTrees.end());
 	
 }
@@ -235,7 +237,6 @@ int HeuristicIgnorantMethod(vector<int> dimensions) {
 		cost += dimensions[0] * dimensions[1] * dimensions[2]; 
 		dimensions.erase(dimensions.begin() + 1); 
 	}
-	// If the number has gone to 0 or below, that means the cost is too high and is now overflowing max amount allowed for int data type
 	return cost;
 }
 
@@ -406,7 +407,7 @@ int main() {
 	char userInput; 
 	cout << "Welcome to the CS404 Project involving Matrix Multiplication" << endl; 
 	while (true) {
-		cout << "Press 1 to see the Matrix Chain Experiment with random files" << endl
+		cout << "Press 1 to see the Matrix Chain Experiment with random numbers" << endl
 			<< "Press 2 to see the Matrix Chain Experiment with the given files" << endl
 			<< "Press 3 to input your own values for the matrix chain" << endl
 			<< "Press 4 to see the test case that was created" << endl
